@@ -1,0 +1,24 @@
+USE [paerp]
+GO
+
+/****** Object:  Table [dbo].[db_countries]    Script Date: 03/17/2017 15:09:42 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[db_countries](
+	[idcountry] [int] NOT NULL,
+	[country_code] [nchar](2) NOT NULL,
+	[country_name] [nchar](100) NOT NULL,
+	[country_full_name] [nchar](100) NULL,
+	[country_iso3] [nchar](3) NULL,
+ CONSTRAINT [PK_db_countries] PRIMARY KEY CLUSTERED 
+(
+	[idcountry] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+

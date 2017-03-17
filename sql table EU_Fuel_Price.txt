@@ -1,0 +1,42 @@
+USE [paerp]
+GO
+
+/****** Object:  Table [dbo].[EU_Fuel_Price]    Script Date: 03/17/2017 15:08:44 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[EU_Fuel_Price](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[auto_sql_date] [datetime] NOT NULL,
+	[manual_datetime] [date] NOT NULL,
+	[company_name] [varchar](150) NOT NULL,
+	[country] [int] NULL,
+	[town] [varchar](150) NULL,
+	[price] [decimal](6, 2) NOT NULL,
+ CONSTRAINT [PK_EU_Fuel_Price] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[EU_Fuel_Price]  WITH CHECK ADD  CONSTRAINT [FK_EU_Fuel_Price_db_countries] FOREIGN KEY([country])
+REFERENCES [dbo].[db_countries] ([idcountry])
+GO
+
+ALTER TABLE [dbo].[EU_Fuel_Price] CHECK CONSTRAINT [FK_EU_Fuel_Price_db_countries]
+GO
+
+ALTER TABLE [dbo].[EU_Fuel_Price] ADD  CONSTRAINT [DF_EU_Fuel_Price_auto_sql_date]  DEFAULT (getdate()) FOR [auto_sql_date]
+GO
+
