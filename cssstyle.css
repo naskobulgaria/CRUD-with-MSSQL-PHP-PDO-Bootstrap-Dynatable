@@ -1,0 +1,145 @@
+body{
+	 font-family: sans-serif;
+	font-weight: normal;
+	
+ }
+ 
+ .menuotcheti{
+	display:block;
+		width:160px;
+		height:150px;
+		background-color:#ccc;
+		position:absolute;
+    top:20px;
+    left:40px;
+ }
+  .red{color:#ff0000;}
+ /* CSSTerm.com Simple CSS menu */
+
+.menu_simple ul {
+    margin: 0; 
+    padding: 0;
+    width:160px;
+    list-style-type: none;
+	font-weight:bold;
+}
+
+.menu_simple ul li a {
+    text-decoration: none;
+    color: white; 
+    padding: 10.5px 11px;
+    background-color: #4766C2;
+    display:block;
+}
+ 
+.menu_simple ul li a:visited {
+    color: white;
+}
+ 
+.menu_simple ul li a:hover, .menu_simple ul li .current {
+    color: white;
+    background-color: #35b128;
+}
+        table.mytable {
+            font-family: verdana,arial,sans-serif;
+	font-size:11px;
+        
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+        }
+        table.mytable th {
+            background-color:#c3dde0;
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #a9c6c9;
+        
+        }
+        table.mytable tr {
+            background-color:#d4e3e5;
+        }
+        
+        table.mytable tr:hover {
+          background-color: #ffff99;
+    }
+        table.mytable td {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #a9c6c9;
+        
+}        
+table.mytable td.bold{
+    font-weight: bold;
+}
+table.mytable .headertb{
+	text-align:center;
+}
+table.mytable .rowstb{
+	text-align:right;
+}
+    
+span.twitter-typeahead .tt-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+span.twitter-typeahead .tt-suggestion > p {
+  display: block;
+  padding: 3px 20px;
+  margin-bottom: 0px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+span.twitter-typeahead .tt-suggestion > p:hover,
+span.twitter-typeahead .tt-suggestion > p:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #428bca;
+}
+span.twitter-typeahead .tt-suggestion.tt-cursor {
+  color: #ffffff;
+  background-color: #428bca;
+}
+span.twitter-typeahead {
+  width: 100%;
+}
+.input-group span.twitter-typeahead {
+  display: block !important;
+}
+.input-group span.twitter-typeahead .tt-dropdown-menu {
+  top: 32px !important;
+}
+.input-group.input-group-lg span.twitter-typeahead .tt-dropdown-menu {
+  top: 44px !important;
+}
+.input-group.input-group-sm span.twitter-typeahead .tt-dropdown-menu {
+  top: 28px !important;
+}
+.twitter-typeahead{
+position:relative;
+display:block;
+}
+td.thred {background-color:#CC0000; text-align:center;}
