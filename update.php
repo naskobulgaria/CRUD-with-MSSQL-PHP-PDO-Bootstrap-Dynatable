@@ -32,7 +32,7 @@
 {
 $id=$_GET['id'];
 
-	$result = $pdo->prepare("SELECT EU_Fuel_Price.id, manual_datetime,EU_Fuel_Price.company_name,EU_Fuel_Price.country,EU_Fuel_Price.town,EU_Fuel_Price.price,db_countries.idcountry,db_countries.country_name as countryname FROM EU_Fuel_Price INNER JOIN db_countries ON EU_Fuel_Price.id=db_countries.idcountry WHERE EU_Fuel_Price.id = :id");
+	$result = $pdo->prepare("SELECT EU_Fuel_Price.id, manual_datetime,EU_Fuel_Price.company_name,EU_Fuel_Price.country,EU_Fuel_Price.town,EU_Fuel_Price.price,db_countries.idcountry,db_countries.country_name as countryname FROM EU_Fuel_Price LEFT JOIN db_countries ON EU_Fuel_Price.id=db_countries.idcountry WHERE EU_Fuel_Price.id = :id");
 	$result->bindParam(':id', $id, PDO::PARAM_STR);
 	$result->execute();
 	
